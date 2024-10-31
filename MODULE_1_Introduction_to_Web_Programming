@@ -1,0 +1,326 @@
+### 1.1 ######## Web History ################################################################
+
+Internet: Started as four networked computers in 1969.
+
+FTP (File Transfer Protocol): was an early way for transfering file over the Internet.
+
+World Wide Web (web): Developed by Berners-Lee at CERN (Swiss research institute); The web 
+    involved three things:    
+        1.  Text files, known as HTML files, containing links to other text files.
+        2.  A program, known as a browser, for viewing HTML files.
+        3.  A set of rules, known as the HTTP protocol, for transferring HTML files among 
+                computers.
+
+Webpage (Web Page): A document that is viewed in a web browser.
+
+Website: A collection of orgganized webpages.
+
+Web Server: is a program that serves webpages to web browsers.
+
+HyperText marrkup language (HTML): The standard standard markup language for documnets.
+
+Hypertext: Text that has links to other text (images, videos, etc.).
+
+Markup: A special markings in the document that provide additional information about links, 
+    formatiing, and images
+
+Web Browser: A program that downloads an HTML document from a web server, displays the 
+    document to the user with the apppropraite formatting, and allows teh user to interact
+    with the document, suach as by clicking hyperlinks access other documents.
+
+World Wide Web Consortium (W3C): The international standard organization that tradinally has 
+    controlled a number of web standards, including HTML.
+
+Web Hypertext Appplication Technology Working Group (WHATWG): An organization that develops a
+    variety of web standards and whose members include the major browser vendors.
+
+HTML Living Standard: A Continually evolving standard without version numbers that replaces
+    HTML.
+
+### 1.2 ######## IP Addresses, Domain Names, and URLs #######################################
+
+Packet: Contains To and From IP addresses, the information to communicate, and other 
+    configuration information.
+
+IP Adress (Internet Protocol): A computer's unique address on the internet, usually 
+    represented numerically like 198.51.100.7:
+        198.51.100.7 => 11000110 00110011 01100100 00000111
+
+0   = 00000000
+255 = 11111111
+
+IPv4: consist of 32 bit addresses (as seen above)
+IPv6: consist of 128-bit addresses (as seen below)
+        00000000 00000000 00000000 00000000
+        00000000 00000000 00000000 00000000
+        00000000 00000000 00000000 00000000
+        00000000 00000000 00000000 00000000
+
+Domain Name: A name for an IP addres, such as the name wikipedia.org for the IP address 
+    198.35.26.96 .
+
+DNS Server (Domain Name System): Point of contact to convert a domain name to an IP address.
+
+Root Servers: The Thirteen main DNS servers that exist in the world, and a computer's 
+    operating system or ISP keeps a reference to the root servers' IP addresses.
+
+Domain Name Registrar: Where to register an unused domain name.
+
+Top-Level Domains (TLD): Ex. .com, .net, .org, .edu, .gov
+
+Country Code Top-Level Domain (ccTLD): Ex. .uk(United Kingdom), .ru(Russia), .de(Germant)
+
+Second-Level Domain: EX. Wikipedia in wikipedia.org
+
+URL (Uniform Resource Locator): A location of a web resource on the web, susch as
+    http://www.cdc.gov/alcohol/faqs.htm.
+
+Web Resources: Any retrievable item, like an HTML file, image, video, CSS stylesheet, etc.
+
+Scheme: Characters at the beginning of a URL followed by a colon 
+    EX. http, https, mailto, and file  => https in https://www.cdc.gov/alcohol
+
+Hostname: The complete domain name following the scheme in a URL.
+    EX. www.cdc.gov in https://www.cdc.gove/alcohol
+
+Path: The Characters to the right of teh hostname n a URL.
+    EX. /alcohol in https://www.cdc.gove/alcohol
+
+Query String: Optional Charactters to the right of the question mark in a URL that privide 
+    data for the web server. In https://www.youtube.com/wat?v=uu7XCEMdSHg, the characters after the ? tells Youtube's server to play a video having code uu&XCEMdSHg.
+
+Fragment: Optional characters at teh end of a URL that start with a hash character and refer 
+    to a certain location within a webpage. In https://en.wikipedia.org/wiki/URL#History, the fragment "#History" refers to the webpage's History section.
+
+404 Status Code: If a web server is reached but the specific requested page isn't found.
+
+Linkrot: The general name for a once valid link that now returns a 404 status code.
+
+### 1.3 ######## HTTP #######################################################################
+
+HyperText Transfer Protocol (HTTP): A Networking protocol that runs over TCP/IP and govers
+    communication between web browsers and web servers.
+        -   HTTP/1.1
+        -   HTTP/2
+        -   HTTP/3
+
+Transmission Control Protocol/Internet Protocol (TCP/IP): A protocol suite that governs how
+    data packets are transferred over the internet from one machine to another.
+
+DNS Lookup: Sending the domain name to the local DNS and getting back the IP address of the 
+    web server hosting the domain name.
+
+HTTP Request: A message sent from teh web browser to the web server.
+
+HTTP Response: A message sent from teh web server back to the web browser in response to an
+    HTTP request.
+
+Start Line: Specifies the HTTP version being used
+    EX.                 Request Type|        Path        |HTTP version
+          Start Line =>          GET|/wiki/World_Wide_Web|HTTP/1.1
+
+Header Field: A keyword followed by a colon and a value
+    Ex.                             |Hostname
+        Header Field =>        Host:|en.wikipedia.org
+        Header Field =>  User-Agent:|Mozilla/5.0 Chrome/48.0.2564
+                                    |Browser Identifier
+                        
+Internet Assigned Numbers Authority (IANA): A standard organizationthat manages various
+    internet numbers and symbols, like global IP address allocation, root zone management in 
+    DNS, and media types.
+
+Chrome's Developer Tools (DevTools): Like chrome all popular web browsers contain built-in 
+    developer tools.
+
+Request Method: Indicates the desired action to perform on a resource.
+
+  Request method|Meaning
+-===========================================================================================-
+       GET	    |Request a representation of the specified resource.
+-===========================================================================================-
+       HEAD	    |Request a response identical to GET but without the response body.
+-===========================================================================================-
+       POST	    |Create a new resource with the contents of the message body.
+-===========================================================================================-
+       PATCH	|Modify an existing resource with the contents of the message body.
+-===========================================================================================-
+       PUT	    |Replace an existing resource with the contents of the message body.
+-===========================================================================================-
+       DELETE	|Delete an existing resource.
+-===========================================================================================-
+
+Status Code: A three digit number that indicates the status of the requested resource.
+
+
+Status code|	  Status phrase	    |Meaning
+-===========================================================================================-
+    200    |	       OK	        |Standard response for a successful request.
+-===========================================================================================-
+    301	   |    Moved Permanently	|The resource should always be requested at a different 
+           |                        |    URL.
+-===========================================================================================-
+    302	   |          Found	        |The resource should temporarily be requested at a  
+           |                        |    different URL.
+-===========================================================================================-
+    304	   |       Not Modified	    |The resource has not been modified since the
+           |                        |   last time the resource was requested.
+-===========================================================================================-
+    403	   |        Forbidden	    |The web browser does not have permission to access the  
+           |                        |    resource.
+-===========================================================================================-
+    404    |        Not Found	    |The resource could not be located.
+-===========================================================================================-
+    500	   | Internal Server Error  |Something unexpected happened on the web server.
+-===========================================================================================-
+
+Browser Redirect: The web server returns a 301 or 302 Status code with a Location header
+    indicating the URL the browser should load next.
+
+URL shortening: A technique to create shorter URLs that redirect to longer URLs.
+
+Browser Cache: An area on the computer's file system where web content can be stored by the 
+    browser for quick retrieval later.
+
+Entity Tag (ETag): An identifier for a specific version of a web sresource.
+    Ex. 34905a3e285dd11
+
+If-Modified-Since: Used with the Last-Modified data/time to request the web server only send 
+    the requested resource if the resource has changed since the specified date/time.
+
+Expires: Contains a date/time indicating when the requested resource is considered "stale".
+
+Cache-Control: Used to specify a number of chaching directives.
+
+Network Sniffer: Software that monitors network traffic and allows users to inspect HTTP 
+    requests and responses.
+
+HTTPS: Encrypts HTTP traffic between a browser and web server so a network sniffer cannot
+    intercept sensitive information in the HTTP traffic like passwords, credit card numbers, financial transactions, etc.
+
+Transport Layer Security (TLS): Uses Asymmetic public keys to encrypt data between the 
+    browser and web server.
+
+Digital Certificate: Contains a public key used by TLS to encrypt data.
+
+Certificate Authority: Issues digital certificates.
+
+### 1.4 ######## Web Trends #################################################################
+
+Mobile Device: A handheld computer, like a smartphone or tablet.
+
+Internet of Things (IoT): The global collection of communicating devices that sense and 
+    control technology on behalf of humnans.
+
+Web Accessibility: The ability of users with disablities to access and use a webpage with
+    reasonable effort.
+
+Cognitive Computing: The use of artificial intelligence techniques and access to vast
+    amounts of data to simulate human problem solving in complex situations with ambiguity, changing data, and event conflicting information.
+
+Separation of Concerns: The design principle of breaking up web content using distinct 
+    languages and documents that overlap as little as possible.
+
+### 1.5 ######## Introduction to HTML #######################################################
+
+HTML (HyperText Markup Language): A textual language for creating webpages.
+
+Element: A single HTML struture that is represented with HTML tags
+
+Tag: A descriptive name surrounded by < and > characters that the web browser uses to 
+    display content.
+        Ex. <p>
+
+ Elements	|                     Purpose	            |Example HTML
+-===========================================================================================-
+h1, h2, h3	|             Headers. h1 is largest.	    |<h2>Puppies are cute</h2>
+-===========================================================================================-
+     p	    |                   Paragraph	            |<p>Humans seem designed to see 
+            |                                           |puppies as cute.</p>
+-===========================================================================================-
+em, strong	|  Emphasis (italic), strong emphasis (bold)|"When in <strong>doubt</strong>,
+            |                                           |tell the <em>truth</em>" -Mark     
+            |                                           |Twain.
+-===========================================================================================-
+    img	    |                    Image	                |<img src="https://resources.zybooks.
+            |                                           |com/WebProgramming/ducativ1.jpg" 
+            |                                           |alt="Bike photo">
+
+            Note: src is the image's URL source, and alt describes the image.
+-===========================================================================================-
+     a	    |                     Link	                |<a href="https://www.wikipedia.org/ 
+            |                                           |">Click Here</a>
+-===========================================================================================-
+
+Link: A webpage is aclickable item that causes the web browser to open another webpage when 
+    clicked.
+
+### 1.6 ######## Introduction to CSS ########################################################
+
+Cascading Style Sheets (CSS): A textual language for describing how a webpage is styled for 
+    visual presentation. CSS controls the look and layout of webpage content.
+
+CSS Rule: Specifies styling properties for specific HTML elements.
+
+
+Properties	    |            Purpose	                     |Example CSS
+-===========================================================================================-
+background-color|	Element's background color	             |h1 {
+                |                                            |   background-color: lightgray;
+                |                                            |}
+-===========================================================================================-
+color	        |       Element's font color	             |               h1 {
+                |                                            |    color: darkblue;
+                |                                            |}
+-===========================================================================================-
+font-family	    |    Font used for the element's             |p{
+                |                text.	                     | font-family: arial;
+                |                                            |}
+-===========================================================================================-
+font-size	    |    Font size used for the                  |p{
+                |          element's text.	                 |   font-size: 9pt;
+                |                                            |}
+-===========================================================================================-
+padding	        |    Spacing between element's               |strong{
+                |        content and border.	             |        padding: 5px;
+                |                                            |}
+-===========================================================================================-
+margin	        |    Spacing around element                  |p{
+                |    (outside element's border).	         |    margin-left: 10px;
+                |                                            |}
+
+Note: margin-top, margin-bottom, margin-left, and margin-right specify margin for individual 
+        sides.
+-===========================================================================================-
+
+CSS Color: Can be a pre-defined name like blue, or an rgb value.
+
+RGB: Short for red, green, blue; all colors can be formed by combining those three colors.
+
+Name	        |RGB Color	
+-=====================================-
+Red	            |rgb(255, 0, 0)
+-=====================================-	                	
+Green	        |rgb(0, 255, 0)	 
+-=====================================-               	
+Blue	        |rgb(0, 0, 255)	
+-=====================================-                	
+LightSeaGreen	|rgb(32, 178, 170)	
+-=====================================-                	
+Purple	        |rgb(128, 0, 128)
+-=====================================-	                	
+DarkGray	    |rgb(169, 169, 169)	
+-=====================================-                	
+White	        |rgb(255, 255, 255)	
+-=====================================-                	
+Black	        |rgb(0, 0, 0)	
+-=====================================-
+
+### 1.7 ######## Introduction to JavaScript #################################################
+
+JavaScript: A programming language that runs in a browser, enabling webpages supporting 
+    actions like responding to a button click.
+
+Variable: Stores a value or a reference to a webpage element.
+
+Function: A named group of statements that can be executed by referring to that name.
+
