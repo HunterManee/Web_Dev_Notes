@@ -1,0 +1,244 @@
+### 2.1 ######## HTML Document Structure ####################################################
+HTML (HyperText Markup Language): A textual language for creating webpages.
+
+Element: A single HTML structure.
+
+Tag: A markup instruction identified by <, the tag name, and >.
+
+Opening Tag: indicates the element's starting point in the document.
+
+Closing Tag: Indicates the element's ending pong in the document.
+
+Void Element: An element that only needs an opening tag.
+
+<!DOCTYPE html>: Declaration instructs the web browser about what type of document follows.
+
+<html>: Element encolses everything but the  <!DOCTYPE html> declaration.
+    <html lang="en"> indicates that the document's language is English.
+
+<head>: Element contains the document title, document metadata, and various other elements
+    that are typically not displayed in the webpage.
+
+<meta>: Element specifies metadata, which is data that describes the document's data.
+    <meta charset="UTF-8"> describes how characters are represented in the HTML document.
+    Additional <meta> tags may be used to indicate when the document was saved, who the author is, etc.
+
+<title>: element specifies the document's name. The title is usually displayed in the       
+    browser's titlebar, is used by search engines, and is used for bookmarking.
+
+<body> element encloses all elements and content to be rendered in the browser.
+
+Attribute: Provides additional information about the element and is included on only the 
+    opening tag.
+
+Quirks Mode: A browser rendering mode that renders a webpage using non-standard layout rules 
+    emulating older web browsers.
+
+Standards Mode: Which uses the HTML Living Standard.
+
+UTF-8: A common character encoding that describes characters used by most of the world's 
+    languages.
+
+Chrome DevTools: A collection of web development tools that are built into the desktoop 
+    Chrome browser. (This applies to most bowsers such as safari and firefox)
+
+Deprecated: A part of a language that is officially discouraged becuase newer or better
+    features exist, or because the deprecated feature is notlonger considered safe.
+
+HTML validator: checks that an HTML document conforms to the standard.
+
+
+### 2.2 ######## Basic HTML Elements ########################################################
+<p></p>: element creates a PARAGRAPH in an HTML document.
+
+Whitespace: Character is an unprinted character such as the spaces between words and lines
+    of text.
+
+<br>: element creates a LINE BREAK in a paragraph, such that the content after the line
+    break appears on a new line.
+
+<section></section>: A collection of related content
+
+Heading: provides a title for each section
+    <h1></h1>
+    <h2></h2>
+    <h3></h3>
+    <h4></h4>
+    <h5></h5>
+    <h6></h6>
+
+Text Formatting: HTML elements cause the enclosed text to render in a defferent format:
+        <em></em>: Emphasized text
+        <strong></strong>: Indicates text has a strong importance
+        <cite></cite>: Element denotes a title, such as a book or song title
+        <mark></mark>: Element to Highlight
+        <b></b>: Bold
+        <i></i>: Italics
+        <u></u>: Underline
+        <var></var>: Definition of a variable in a computer program
+        <kbd></kbd>: Keyboard Input
+        <code></code>: Computer Code
+        <samp></samp>: Sample output from a computer
+
+### 2.3 ######## Comments ###################################################################
+Comment: A portion of the document that is not displayed by the browser.
+<!--THIS IS AN EXAMPLE OF A COMMENT-->
+
+Comments CANNOT be NESTED
+
+### 2.4 ######## Lists ######################################################################
+Unordered List: A collection of items, usually indented and shown using byllets, created
+    with the <ul></ul> element.
+
+Ordered List: A sequenced collection of items, usually indented and shown using numbers
+    or letters, created with the <ol></ol> element.
+
+List Item: Element within an unordered/ordered list. Indicated with <li></li>
+
+Type Attribute: The ordered list numbering scheme specification
+    -type="1": Numbers(default)
+    -type="A": Uppercase letters
+    -type="a": Lowercase letters
+    -type="I": Uppercase Roman numerals
+    -type="i": Lowercase Roman numerals
+
+List-style-type: provides the ability to change the bullet used in an unordered list and 
+    offers more numbering options in an ordered list.
+
+### 2.5 ######## Tables #####################################################################
+<table></table>: A Table is an HTML structure that organizes data into rows and columns.
+
+Cell: a A location in the table at a specific row and column.
+
+<tr></tr>: Element creates a table row, which contains all the row's cells.
+
+<th></th>: Elements creates a table cell containing table header information about the data.
+
+<td></td> element creates a table cell containing table data.
+
+<caption></caption>: A caption defines a short descriptive text for a table.
+
+scope: attribute is commonly assigned "col" or "row" to indicate if the table header
+    applies to a column or row of data
+
+colspan: attribute to express how many columns a set of data will take within a table
+rowspan: attributes to express how many rows a set of data will take within a table
+
+<thead> Element specifies the table header.
+
+<tbody> Element specifies the table body.
+
+<tfoot> Element specifies the table footer.
+
+
+
+### 2.6 ######## Images #####################################################################
+<img>: element is a void element that displays an image in a webpage. The element has two
+
+src: An attribute specifies the URL of the image file to display.
+
+alt: An attribute provides a text description to use as an alternative to displaying the
+    image. (required)
+
+width: An optional attribute that defines how many pixels wide an image is
+
+height: An optional attribute that defines how many pixels high an image is
+
+aspect ratio: The ratio of the image width to the image height.
+
+Ex. <img alt="A sleepy dog"
+    src="https://resources.zybooks.com/WebProgramming/mediumDogv1.jpg"
+    width="1000" height="500">
+
+
+JPEG (Joint Photographic Experts Group): Image format is commonly used for digital
+
+PNG (Portable Network Graphics): Image format is commonly used for line art, screenshots,
+    or images requiring transparency
+
+GIF (Graphics Interchange Format): Image format is commonly used for simple animated images.
+
+Lossy Compression: Used by JPEG; When used some of the information from the original picture
+    has been lost due to compression
+
+Lossless Compression: Used by PNG and GIF images; Meaning no image quality is lost
+
+True Color: (24-bit color), which is approximately 16 million different colors.
+
+APNG: Format by Mozilla adds animation capability to PNG with try color support.
+
+SVG: Image format is an XML format that describes an image as a serires of shapes and lines.
+
+WEBP: Image format by Google supports true color, transparency, and animation.
+
+AVIF: Image format supports transparency, lossy or lossless compression, and higher
+    compression rates.
+
+Favicon: A small icon that identifies a website and typically displays in a browser tab.
+
+
+### 2.7 ######## Links ######################################################################
+<a>: Anchor element, defines a hyperlink in a webpage.
+
+Hyperlink (link): Specifies where other information is located and what action the web
+    browser should perform when a user clicks the hyperlink.
+
+Href: An attribute that specifies the hyperlink's URL
+    Ex. <a href="https://wikipedia.org/">Wikipedia</a> 
+
+Absolute URL: A complete URL
+    Ex. <a href="http://example.com/test.html">test</a>
+
+Relative URL: A specifies the relative path to the web resource with no scheme or hostname.
+    Ex. <a href="test.html">test</a>
+
+Fragment: A section of a document denoted by a hash tag (#) and a fragment identifer
+    Ex.  https://en.wikipedia.org/wiki/Computer_science#History
+
+id: An attribute to any element creates a FRAGMENT IDENTIFIER
+    Ex. <section id="Ch1">
+
+Graphical Hyperlink: image link uses an image inside a hyperlink instead of text
+    Ex. <a href="http://www.akc.org/">
+            <img src="dog.jpg" alt="Link to AKC using an image of a dog.">
+        </a>
+
+Target Attribute: Indicates how the browser should display the link when clicked
+    _self: attribute value is the default and indicates the browser will open the link in
+        the same tab or window
+
+    _blank: attribute value indicates the browser will open the link in a new tab or
+        window
+Ex. <a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank">Wikipedia main page</a> 
+
+
+
+### 2.8 ######## Special Characters #########################################################
+Entity: A mechanism for writing special characters or symbols in HTML, such as mathematical
+    symbols, characters in most languages, and many other symbols.
+
+Format Type        | Format Example | Symbol |
+-===========================================================================================-
+                   |                |        |HTML defines names for common well-known  
+Entitle Name       |     &copy;     |    ©   |entities, which are typically English 
+                   |                |        |abbreviations for the  symbol.
+-===========================================================================================-
+Decimal Number     |     &#169;     |    ©   |Every HTML entity has a unique number, which
+                   |                |        |can be specified as a decimal value.
+-===========================================================================================-
+                   |                |        |Every HTML entity has a unique hexadecimal 
+Hexadecimal Number |    &#x000A9;   |    ©   |number, which is the hexadecimal equivalent 
+                   |                |        |to the entity's decimal number.
+
+Non-Breaking Character: An inter-word character that permits treating the words on both sides
+    be one word.
+
+None-Breaking Hyphen (&#8209;): Ex. off-campus
+
+None-Breaking Space (&nbsp;): Ex. 5 km
+
+**************************************** SIDENOTE *******************************************
+Wireframe: A blueprint, showing where the future content will be arranged
+
+
+
